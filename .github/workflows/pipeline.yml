@@ -1,4 +1,4 @@
-name: Deploy poc kotlin lambda
+name: Poc kotlin AWS Lambda With Serverless
 
 on:
   push:
