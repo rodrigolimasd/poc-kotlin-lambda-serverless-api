@@ -7,19 +7,22 @@ on:
 
 jobs:
   Build:
-    runs-on: ubuntu-last
+    runs-on: ubuntu-latest
+    environment:
+      name: Prod
+      url: https://test.com
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v3
-
-      - name: Setup Java
-        uses: actions/setup-java@v3
-        with:
-          distribution: temurin
-          java-version: 11
-
-      - name: Setup Gradle
-        uses: gradle/gradle-build-action@v2
-
-      - name: Execute Gradle Build
-        run: ./gradlew build
+#
+#      - name: Setup Java
+#        uses: actions/setup-java@v3
+#        with:
+#          distribution: temurin
+#          java-version: 11
+#
+#      - name: Setup Gradle
+#        uses: gradle/gradle-build-action@v2
+#
+#      - name: Execute Gradle Build
+#        run: ./gradlew build
