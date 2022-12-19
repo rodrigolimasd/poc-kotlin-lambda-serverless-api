@@ -6,3 +6,14 @@ frameworkVersion: '3'
 provider:
   name: aws
   runtime: java11
+
+package:
+  artifact: app/build/distributions/app.zip
+
+functions:
+  hello:
+    handler: com.rodtech.serverless.ApiHandle
+    events:
+      - httpApi:
+          path: /hello
+          method: get
